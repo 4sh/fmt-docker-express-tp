@@ -61,11 +61,11 @@ export class ArticleListComponent implements OnDestroy {
       .pipe(takeUntil(this.destroy$))
       .subscribe((data) => {
         this.loading = LoadingState.LOADED;
-        this.results = data.articles;
+        this.results = data.ArticleListResponse.articles;
 
         // Used from http://www.jstips.co/en/create-range-0...n-easily-using-one-line/
         this.totalPages = Array.from(
-          new Array(Math.ceil(data.articlesCount / this.limit)),
+          new Array(Math.ceil(data.ArticleListResponse.articlesCount / this.limit)),
           (val, index) => index + 1
         );
       });
