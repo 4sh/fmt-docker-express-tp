@@ -1,9 +1,11 @@
 version: "3.9"
 
 services:
-  # TODO: Compléter le service database
-  # database:
-    # container_name:
-    # image:
-    # environment:
-    # ports:
+  database:
+    container_name: real-world-app-database
+    image: mysql:8.1.0
+    environment:
+      MYSQL_DATABASE: realworld
+      MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - "13306:3306"
