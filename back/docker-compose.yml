@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  # TODO: Compléter le service database
+  # database:
+    # container_name:
+    # image:
+    # environment:
+    # ports:
